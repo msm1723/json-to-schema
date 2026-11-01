@@ -1,0 +1,20 @@
+[build-system]
+requires = ['uv_build>=0.13.1,<0.14']
+build-backend = 'uv_build'
+
+[project]
+name = 'json-to-schema'
+version = '0.1.0'
+description = 'Generate readable JSON Schema documents from JSON examples.'
+readme = 'README.md'
+requires-python = '>=3.14'
+dependencies = []
+
+[project.scripts]
+json-to-schema = 'json_to_schema.cli:main'
+
+[dependency-groups]
+dev = ['pytest>=8.4', 'jsonschema>=4.25']
+
+[tool.pytest.ini_options]
+testpaths = ['tests']
